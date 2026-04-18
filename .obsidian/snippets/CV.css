@@ -1,0 +1,190 @@
+/*
+ * CV Snippet — scoped to reading view of notes with cssclasses: [reading-mode]
+ */
+
+/* === Variables & Base === */
+.markdown-preview-view.reading-mode {
+    --cv-accent: #2e5c94;
+    --cv-text: #222;
+    --cv-bg: #fff;
+    --cv-border: #dae3ea;
+    --cv-font: 'Segoe UI', 'Roboto', sans-serif;
+
+    max-width: 210mm !important;
+    margin: 0 auto !important;
+    font-family: var(--cv-font) !important;
+    color: var(--cv-text) !important;
+    background-color: var(--cv-bg) !important;
+    font-size: 11pt !important;
+    padding: 40px !important;
+}
+
+.markdown-preview-view.reading-mode p,
+.markdown-preview-view.reading-mode li,
+.markdown-preview-view.reading-mode table {
+    color: var(--cv-text) !important;
+}
+
+/* Hide title, frontmatter, properties */
+.markdown-preview-view.reading-mode .inline-title,
+.markdown-preview-view.reading-mode .frontmatter-container,
+.markdown-preview-view.reading-mode .metadata-container {
+    display: none;
+}
+
+/* === Headings === */
+.markdown-preview-view.reading-mode h1,
+.markdown-preview-view.reading-mode h2,
+.markdown-preview-view.reading-mode h3,
+.markdown-preview-view.reading-mode h4 {
+    font-family: var(--cv-font);
+    color: var(--cv-text);
+    margin-top: 10px !important;
+}
+
+/* H1 - Name */
+.markdown-preview-view.reading-mode h1 {
+    font-size: 28pt;
+    text-align: center;
+    border-bottom: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Subtitle (blockquote) */
+.markdown-preview-view.reading-mode blockquote {
+    text-align: center;
+    font-size: 14pt;
+    color: #666;
+    border-left: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+/* H2 - Section Headers */
+.markdown-preview-view.reading-mode h2 {
+    font-size: 14pt;
+    color: var(--cv-accent);
+    border-bottom: 2px solid var(--cv-border);
+    padding-bottom: 4px;
+    margin-bottom: 6px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* H3 - Job & Education Titles */
+.markdown-preview-view.reading-mode h3 {
+    font-size: 12.5pt;
+    margin-bottom: 0;
+}
+
+/* Flex spacer for split-left-right headings */
+.markdown-preview-view.reading-mode h3:has(.spacer),
+.markdown-preview-view.reading-mode h4:has(.spacer),
+.markdown-preview-view.reading-mode p:has(.spacer) {
+    display: flex;
+    align-items: baseline;
+}
+
+.markdown-preview-view.reading-mode .spacer {
+    flex: 1 1 auto;
+    display: block;
+}
+
+/* === Lists & Paragraphs === */
+.markdown-preview-view.reading-mode p,
+.markdown-preview-view.reading-mode ul,
+.markdown-preview-view.reading-mode ol {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.markdown-preview-view.reading-mode ul,
+.markdown-preview-view.reading-mode ol {
+    padding-left: 20px;
+}
+
+.markdown-preview-view.reading-mode li {
+    line-height: 1.5;
+    font-size: 11pt;
+    margin-bottom: 3px;
+}
+
+/* Tighten spacing after headings */
+.markdown-preview-view.reading-mode h2 + *,
+.markdown-preview-view.reading-mode h3 + *,
+.markdown-preview-view.reading-mode h4 + * {
+    margin-top: 0 !important;
+}
+
+/* === Links === */
+.markdown-preview-view.reading-mode a {
+    color: var(--cv-accent) !important;
+    text-decoration: none;
+}
+
+.markdown-preview-view.reading-mode .contact-icon {
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    top: -1px;
+}
+
+/* === Tables === */
+.markdown-preview-view.reading-mode table,
+.markdown-preview-view.reading-mode th,
+.markdown-preview-view.reading-mode td {
+    border: none !important;
+    background: transparent !important;
+}
+
+.markdown-preview-view.reading-mode table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.markdown-preview-view.reading-mode th {
+    text-align: left;
+    color: var(--cv-accent) !important;
+    padding: 6px 5px;
+    font-size: 11.5pt;
+    text-transform: uppercase;
+}
+
+.markdown-preview-view.reading-mode th:first-child,
+.markdown-preview-view.reading-mode td:first-child {
+    padding-left: 0;
+}
+
+.markdown-preview-view.reading-mode td {
+    padding: 4px 5px;
+    font-size: 11pt;
+    vertical-align: top;
+}
+
+/* === Print === */
+@media print {
+    @page { margin: 15mm 20mm; }
+
+    .markdown-preview-view.reading-mode {
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .markdown-preview-view.reading-mode h2,
+    .markdown-preview-view.reading-mode h3,
+    .markdown-preview-view.reading-mode table {
+        page-break-after: avoid;
+    }
+
+    .markdown-preview-view.reading-mode tr,
+    .markdown-preview-view.reading-mode li {
+        page-break-inside: avoid;
+    }
+}

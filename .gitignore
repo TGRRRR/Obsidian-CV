@@ -1,0 +1,4 @@
+.obsidian/*
+!.obsidian/snippets/
+.obsidian/snippets/*
+!.obsidian/snippets/CV.css
