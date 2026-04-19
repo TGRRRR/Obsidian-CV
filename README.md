@@ -50,7 +50,14 @@ The favicon URL format is: `https://www.google.com/s2/favicons?sz=32&domain=DOMA
 | `### Title`                 | Job/education entry title               |
 | `h3` or `h4` with `.spacer` | Left-right layout (title \| details)    |
 | `#### Subtitle`             | Muted sub-heading                       |
-| Bullet lists                | Achievement/-detail bullets             |
+| Bullet lists (`•`)          | Achievement/-detail bullets             |
+### Bullet points
+Use `•` (Unicode bullet) instead of `-` for lists. PDF-to-MD converters often reorder standard Markdown lists, pushing them all to the bottom and breaking the CV layout. `•` avoids this because it's treated as plain text, not a list item.
+
+```markdown
+• Achievement description here
+• Another achievement
+```
 ### Export to PDF
 Options -> Export to PDF to export. The CSS includes print styles - margins, page breaks, and colors are handled automatically.
 ## Customization
