@@ -100,9 +100,23 @@
     margin-bottom: 6px;
 }
 
-.markdown-preview-view.reading-mode ul,
+.markdown-preview-view.reading-mode ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
 .markdown-preview-view.reading-mode ol {
     padding-left: 20px;
+}
+
+.markdown-preview-view.reading-mode ul > li {
+    position: relative;
+}
+
+.markdown-preview-view.reading-mode ul > li::before {
+    content: "• ";
+    position: absolute;
+    left: -15px;
 }
 
 .markdown-preview-view.reading-mode li {
