@@ -2,7 +2,7 @@
 
 A CSS snippet that turns any Obsidian note into a clean, ATS-friendly resume - no plugins required.
 
-Switch to Reading View to preview, **Ctrl+P** to print to PDF.
+Switch to Reading View to preview or export to PDF.
 
 ![CV Example](CV%20example.jpg)
 
@@ -51,8 +51,8 @@ The favicon URL format is: `https://www.google.com/s2/favicons?sz=32&domain=DOMA
 | `h3` or `h4` with `.spacer` | Left-right layout (title \| details)    |
 | `#### Subtitle`             | Muted sub-heading                       |
 | Bullet lists                | Achievement/-detail bullets             |
-### Print / Export to PDF
-**Ctrl+P** (or **Cmd+P**) to print. The CSS includes print styles - margins, page breaks, and colors are handled automatically.
+### Export to PDF
+Options -> Export to PDF to export. The CSS includes print styles - margins, page breaks, and colors are handled automatically.
 ## Customization
 All visual tweaks are CSS variables at the top of [CV.css](.obsidian/snippets/CV.css):
 ```css
