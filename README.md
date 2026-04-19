@@ -1,14 +1,16 @@
 # Obsidian CV
 A CSS snippet that turns any Obsidian note into a clean, ATS-friendly resume - no plugins required.
 Switch to Reading View to preview or export to PDF.
+
 <img src="CV%20example.jpg" width="500">
+
 ## Install
 ### Option 1 - Quick
-1. Download Zip from release
+1. Download [Zip from release](https://github.com/TGRRRR/Obsidian-CV/releases/tag/v1.0.0)
 2. Unzip and paste its content into your vault
 3. Toggle the snippet on in **Settings → Appearance → CSS snippets**
 ### Option 2 - Manual
-1. Download [CV.css](.obsidian/snippets/CV.css) and [CV.md](CV.md)
+1. Download [CV.css and CV.md](https://github.com/TGRRRR/Obsidian-CV/releases/tag/v1.0.0)
 2. Drop `CV.md` anywhere in your vault
 3. Move `CV.css` into your vault's `.obsidian/snippets/` folder
 4. In Obsidian: **Settings → Appearance → CSS snippets** → toggle `CV` on
@@ -45,7 +47,8 @@ The favicon URL format is: `https://www.google.com/s2/favicons?sz=32&domain=DOMA
 | Bullet lists (`-`, `*`)   | Achievement/-detail bullets                                         |
 ### Export to PDF
 Options → Export to PDF. The CSS includes print styles - margins, page breaks, and colors are handled automatically.
-The exported PDF is also ATS-optimized. When parsed by ATS or AI tools, it produces clean, structured text - no tables, messy formatting or lost content. Only thing not parsed is actual URLs
+### ATS, Parsing, MD converting
+The exported PDF is also ATS-optimized. When parsed by ATS, AI tools or [PDF->MD converters](https://pdf2md.morethan.io/), it produces clean, structured text - no tables, messy formatting or lost content. Only thing not parsed is embedded URLs
 ```
 # Obsidian Enjoyer
 ## PKM Enthusiast | Plugin Hoarder | City, Country
@@ -63,8 +66,7 @@ Vault Metrics: 47k notes, 3.2M words, 1,247 plugins (187 enabled), 99% graph pan
 ## WORK EXPERIENCE
 ### Chief Obsidian Evangelist | r/ObsidianMD Remote | Jan 2023 - Present
 - Posted 420+ memes parodying "Just Use Obsidian™" cult; 12k karma, 0 real friends
-- Maintains daily note ritual: 200+ embeds, 15 templates, Templater script that asks "Why are you  
-    like this?"
+- Maintains daily note ritual: 200+ embeds, 15 templates, Templater script that asks "Why are you like this?"
 - Converted 83 forum newbies to plugin addiction via "Start with 5, end with 50" gospel
 ...
 ```
