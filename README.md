@@ -4,7 +4,7 @@ A CSS snippet that turns any Obsidian note into a clean, ATS-friendly resume - n
 
 Switch to Reading View to preview or export to PDF.
 
-![CV Example](CV%20example.jpg)
+<img src="CV%20example.jpg" width="500">
 
 ## Install
 ### Option 1 - Quick
